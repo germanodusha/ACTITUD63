@@ -1,0 +1,10 @@
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: var(--header-height);
+    width: 100%;
+    background: white;
+    z-index: 99;
+    display: flex;
+}
