@@ -57,9 +57,11 @@ const Team: FC = () => {
 const TeamContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  min-height: 80vh;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     grid-auto-flow: row !important;
+    min-height: auto;
   }
 `
 const MemberContainer = styled.div`

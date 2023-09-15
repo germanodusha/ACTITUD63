@@ -7,10 +7,12 @@ type Props = {
   label?: string
   style?: any
 } & HTMLAttributes<HTMLDivElement>
-const Link: FC<Props> = ({ href, label = '<Link>', style }) => {
+const Link: FC<Props> = ({ href, label = 'Link', style }) => {
   return (
     <StyledNextLink style={style} href={href}>
-      {label}
+      {'<'}
+      <b>{label}</b>
+      {'>'}
     </StyledNextLink>
   )
 }
@@ -18,7 +20,6 @@ const StyledNextLink = styled(NextLink)`
   position: relative;
   border-radius: 2rem;
   transition: color 0.5s ease-in-out;
-  font-weight: bold;
   &::after {
     content: '';
     width: 0;

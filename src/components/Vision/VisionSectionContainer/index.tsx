@@ -13,8 +13,8 @@ const VisionSectionContainer: FC<{
   )
 }
 const VisionSectionContainerStyle = styled.div`
-  padding-left: var(--padding-left);
-  padding-right: var(--padding-right);
+  padding-left: 2rem;
+  padding-right: 1rem;
   @media (max-width: 768px) {
     padding-left: 0;
     padding-right: 0;

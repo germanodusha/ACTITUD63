@@ -54,12 +54,12 @@ function convertNumberToRomanNumeral(num: number): string {
 }
 const List = styled.ul`
   list-style: none;
-  padding-left: var(--padding-left);
-  padding-right: var(--padding-right);
+  padding-left: 2rem;
+  padding-right: 1rem;
   display: grid;
   grid-auto-flow: row;
   gap: 1rem;
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     padding-left: 0;
     padding-right: 0;
   }

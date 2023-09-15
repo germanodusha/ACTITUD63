@@ -26,6 +26,8 @@ const LandingContainer = styled.article`
   position: relative;
   align-items: center;
   font-size: 2rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
   @media (max-width: 768px) {
     font-size: 1.25rem;
     padding-left: 1rem;

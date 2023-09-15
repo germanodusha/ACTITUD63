@@ -14,7 +14,8 @@ const Project: FC<ProjectProps> = ({ project }) => {
   return (
     <div
       style={{
-        width: '100%'
+        width: '100%',
+        paddingTop: '2rem'
       }}
     >
       <h1
@@ -28,7 +29,8 @@ const Project: FC<ProjectProps> = ({ project }) => {
       <div
         style={{
           textAlign: 'center',
-          fontSize: '1.5rem'
+          fontSize: '2rem',
+          marginTop: '1rem'
         }}
       >
         <Link href={project.link} />

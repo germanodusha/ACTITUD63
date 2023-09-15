@@ -34,8 +34,8 @@ const Info: FC = () => {
                   <div
                     key={index}
                     style={{
-                      display: 'grid',
-                      gridAutoColumns: 'row',
+                      display: 'flex',
+                      flexDirection: 'column',
                       marginBottom: '1.5rem'
                     }}
                   >
@@ -63,8 +63,10 @@ const InfoContainer = styled.div<{
   display: grid;
   grid-template-columns: repeat(${({ $columns }) => $columns}, 1fr);
   padding-bottom: 3rem;
+  gap: 1rem;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 0;
   }
 `
 const InfoItem = styled.div`
