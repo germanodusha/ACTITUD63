@@ -7,5 +7,9 @@ const VisionListItem: FC<{ children: ReactNode[] }> = ({ children }) => {
 const VisionListItemStyle = styled.li`
   display: grid;
   grid-template-columns: 5rem auto;
+  @media (max-width: 768px) {
+    grid-template-columns: auto auto;
+    gap: 1rem;
+  }
 `
 export default VisionListItem

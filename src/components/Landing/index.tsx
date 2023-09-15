@@ -1,17 +1,9 @@
 import { type FC } from 'react'
 import Typewriter from '../UI/Typewriter'
+import styled from 'styled-components'
 const Landing: FC = () => {
   return (
-    <article
-      style={{
-        height: '100vh',
-        display: 'flex',
-        position: 'relative',
-        marginLeft: '2rem',
-        alignItems: 'center',
-        fontSize: '2rem'
-      }}
-    >
+    <LandingContainer>
       <Typewriter
         prefix="<"
         texts={[
@@ -25,8 +17,22 @@ const Landing: FC = () => {
         delay={100}
         suffix=">"
       />
-    </article>
+    </LandingContainer>
   )
 }
-
+const LandingContainer = styled.article`
+  height: 100vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  font-size: 2rem;
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    * {
+      font-size: 1.25rem;
+    }
+  }
+`
 export default Landing

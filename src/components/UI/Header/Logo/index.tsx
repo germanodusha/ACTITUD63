@@ -22,7 +22,12 @@ const HeaderLogo: FC = () => {
         height
       }}
     >
-      <Image src="/images/header-logo.svg" alt="logo" fill />
+      <Image
+        src="/images/header-logo.svg"
+        alt="logo"
+        fill
+        objectFit="contain"
+      />
     </HeaderLogoContainer>
   )
 }

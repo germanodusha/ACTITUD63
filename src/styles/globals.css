@@ -61,3 +61,19 @@ span {
 b {
   font-size: 1.75rem;
 }
+.mobile-title {
+  display: none;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  span {
+    font-size: 1.25rem;
+  }
+  b {
+    font-size: 1rem;
+  }
+  .mobile-title {
+    display: block;
+    font-size: 1rem;
+  }
+}

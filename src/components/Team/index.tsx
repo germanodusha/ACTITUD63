@@ -1,5 +1,6 @@
 import { type FC } from 'react'
 import Section from '../UI/Section'
+import styled from 'styled-components'
 const mock = {
   name: 'Benedicta M Badia Nordenstahl',
   role: 'Director'
@@ -12,16 +13,17 @@ const team = {
 const Team: FC = () => {
   return (
     <Section id="team" label="team" noypadding>
-      <div
+      <span
+        className="mobile-title"
         style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          maxWidth: '100%'
+          paddingTop: '1rem',
+          lineHeight: '2rem'
         }}
-      >
+      >{`<TEAM>`}</span>
+      <TeamContainer>
         {Object.values(team).map((column, index) => {
           return (
-            <div
+            <MemberContainer
               key={index}
               style={{
                 borderLeft: index !== 0 ? '1px solid #a1a1a1' : 'none',
@@ -30,7 +32,7 @@ const Team: FC = () => {
             >
               {column.map((member, index) => {
                 return (
-                  <div
+                  <Member
                     key={index}
                     style={{
                       display: 'grid',
@@ -42,15 +44,38 @@ const Team: FC = () => {
                       <b>{member.name}</b>
                     </span>
                     <span>{`<${member.role}>`}</span>
-                  </div>
+                  </Member>
                 )
               })}
-            </div>
+            </MemberContainer>
           )
         })}
-      </div>
+      </TeamContainer>
     </Section>
   )
 }
-
+const TeamContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row !important;
+  }
+`
+const MemberContainer = styled.div`
+  @media (max-width: 768px) {
+    border-left: none !important;
+    padding-left: 0 !important;
+  }
+`
+const Member = styled.div`
+  @media (max-width: 768px) {
+    span {
+      line-height: 1.25rem;
+    }
+    span:first-child {
+      width: 70%;
+    }
+  }
+`
 export default Team

@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from '../Services/Link'
 import Section from '../UI/Section'
 import { type FC } from 'react'
+import styled from 'styled-components'
 
 const clipData = [
   {
@@ -26,34 +27,34 @@ const clipData = [
 const Clipping: FC = () => {
   return (
     <Section id="clipping" label="clipping">
+      <span
+        className="mobile-title"
+        style={{
+          paddingBottom: '2rem'
+        }}
+      >{`<CLIPPING>`}</span>
       {clipData.map((clip, index) => {
         return (
           <div key={index}>
             <div
               style={{
-                width: '100%',
-                fontSize: '2rem',
-                textAlign: 'center'
+                width: '100%'
               }}
             >
-              <p>
+              <Description>
                 {`<`}
                 {clip.description}
                 {`>`} <Link href={clip.href} />
-              </p>
+              </Description>
             </div>
-            <div
-              style={{
-                width: '500px',
-                height: '300px',
-                position: 'relative',
-                margin: 'auto',
-                borderRadius: '2rem',
-                overflow: 'hidden'
-              }}
-            >
+            <Media>
               {clip.media.type === 'image' ? (
-                <Image src={clip.media.src} alt={clip.description} fill />
+                <Image
+                  src={clip.media.src}
+                  alt={clip.description}
+                  fill
+                  objectFit="cover"
+                />
               ) : (
                 <video
                   src={clip.media.src}
@@ -65,11 +66,43 @@ const Clipping: FC = () => {
                   }}
                 />
               )}
-            </div>
+            </Media>
           </div>
         )
       })}
     </Section>
   )
 }
+const Description = styled.p`
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
+`
+const Media = styled.div`
+  width: 500px;
+  height: 300px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  max-width: 100%;
+  margin-bottom: 3rem;
+  img {
+    border-radius: 2rem;
+  }
+  video {
+    border-radius: 2rem;
+  }
+  @media (max-width: 768px) {
+    margin: 1.5rem auto;
+    margin-bottom: 3rem;
+    width: 50%;
+    height: 100px;
+    img {
+      border-radius: 1rem;
+    }
+  }
+`
 export default Clipping

@@ -1,4 +1,5 @@
 import { type FC } from 'react'
+import styled from 'styled-components'
 
 const services = [
   {
@@ -29,22 +30,41 @@ const ServicesList: FC = () => {
     >
       {services.map((service, index) => (
         <div key={index}>
-          <h3
+          <Title
             style={{
               fontSize: '2rem',
               fontWeight: 200
             }}
-          >{`<${service.title}>`}</h3>
-          <p
+          >{`<${service.title}>`}</Title>
+          <Description
             style={{
               fontSize: '1.75rem'
             }}
           >
+            <span>{`<${service.title}> `}</span>
             <b>{service.description}</b>
-          </p>
+          </Description>
         </div>
       ))}
     </div>
   )
 }
+const Title = styled.h3`
+  font-size: 2rem;
+  font-weight: 200;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`
+const Description = styled.p`
+  span {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    span {
+      display: inline;
+    }
+    margin-bottom: 1rem;
+  }
+`
 export default ServicesList

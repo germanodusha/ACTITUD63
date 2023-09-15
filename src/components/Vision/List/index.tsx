@@ -59,5 +59,9 @@ const List = styled.ul`
   display: grid;
   grid-auto-flow: row;
   gap: 1rem;
+  @media (min-width: 768px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 `
 export default VisionItemsList

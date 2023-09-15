@@ -7,6 +7,7 @@ const VisionSectionContainer: FC<{
 }> = ({ children }) => {
   return (
     <Section id="vision" label="Vision">
+      <span className="mobile-title">{`<VISION>`}</span>
       <VisionSectionContainerStyle>{children}</VisionSectionContainerStyle>
     </Section>
   )
@@ -14,5 +15,9 @@ const VisionSectionContainer: FC<{
 const VisionSectionContainerStyle = styled.div`
   padding-left: var(--padding-left);
   padding-right: var(--padding-right);
+  @media (max-width: 768px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 `
 export default VisionSectionContainer

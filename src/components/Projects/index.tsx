@@ -1,6 +1,8 @@
 import { type FC } from 'react'
 import Section from '../UI/Section'
 import Project from './Project'
+import Divider from '../UI/Divider'
+import styled from 'styled-components'
 const projectsData = [
   {
     title: 'Project 1',
@@ -25,12 +27,29 @@ const projectsData = [
 ]
 const Projects: FC = () => {
   return (
-    <Section id="projects" label="projects">
+    <Section noxpadding id="projects" label="projects">
       {projectsData.map((project, index) => {
-        return <Project key={index} project={project} />
+        return (
+          <>
+            <ProjectContainer>
+              <Project key={index} project={project} />
+            </ProjectContainer>
+            {index < projectsData.length - 1 ? (
+              <Divider direction="horizontal" />
+            ) : null}
+          </>
+        )
       })}
     </Section>
   )
 }
 
+const ProjectContainer = styled.div`
+  margin-left: 2rem;
+  margin-right: 1rem;
+  @media (max-width: 768px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+`
 export default Projects

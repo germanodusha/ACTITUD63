@@ -12,9 +12,9 @@ const HeaderTitle: FC = () => {
         {`
           .title {
             position: fixed;
-            top: 1rem;
+            top: 2rem;
             right: 1rem;
-            font-size: 5vw;
+            font-size: 4vw;
             text-transform: uppercase;
           }
           @media (max-width: 768px) {

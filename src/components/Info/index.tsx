@@ -1,5 +1,6 @@
 import { type FC } from 'react'
 import Section from '../UI/Section'
+import styled from 'styled-components'
 const infoData = [
   [
     {
@@ -24,22 +25,10 @@ const infoData = [
 const Info: FC = () => {
   return (
     <Section id="info" label="info">
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: `repeat(${infoData.length}, 1fr)`,
-          maxWidth: '100%',
-          paddingBottom: '3rem'
-        }}
-      >
+      <InfoContainer $columns={infoData.length}>
         {infoData.map((column, index) => {
           return (
-            <div
-              key={index}
-              style={{
-                paddingLeft: index !== 0 ? '2rem' : 'none'
-              }}
-            >
+            <InfoItem key={index}>
               {column.map((info, index) => {
                 return (
                   <div
@@ -61,11 +50,30 @@ const Info: FC = () => {
                   </div>
                 )
               })}
-            </div>
+            </InfoItem>
           )
         })}
-      </div>
+      </InfoContainer>
     </Section>
   )
 }
+const InfoContainer = styled.div<{
+  $columns: number
+}>`
+  display: grid;
+  grid-template-columns: repeat(${({ $columns }) => $columns}, 1fr);
+  padding-bottom: 3rem;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+`
+const InfoItem = styled.div`
+  display: grid;
+  grid-auto-flow: row;
+  margin-bottom: 1.5rem;
+  @media (max-width: 768px) {
+    padding-left: 0 !important;
+    margin-bottom: 0;
+  }
+`
 export default Info
