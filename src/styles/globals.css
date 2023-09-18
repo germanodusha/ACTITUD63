@@ -12,7 +12,7 @@ span::after {
   --header-height: 11vh;
   --padding-left: 1rem;
   --padding-right: 2rem;
-  cursor: url('/cursor/cursor.svg'), auto;
+  cursor: url('/cursor.svg'), auto;
 }
 b {
   font-family: 'DM Sans', sans-serif;
