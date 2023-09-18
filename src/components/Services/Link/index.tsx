@@ -22,7 +22,7 @@ const StyledNextLink = styled(NextLink)`
   transition: color 0.5s ease-in-out;
   &::after {
     content: '';
-    width: 0;
+    width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
@@ -35,7 +35,6 @@ const StyledNextLink = styled(NextLink)`
     opacity: 0;
   }
   &:hover::after {
-    width: 100%;
     display: block;
     opacity: 1;
     border-radius: 2rem;

@@ -1,6 +1,7 @@
 import { type FC } from 'react'
 import Section from '../UI/Section'
 import styled from 'styled-components'
+import Title from '../UI/Title'
 const mock = {
   name: 'Benedicta M Badia Nordenstahl',
   role: 'Director'
@@ -43,7 +44,7 @@ const Team: FC = () => {
                     <span>
                       <b>{member.name}</b>
                     </span>
-                    <span>{`<${member.role}>`}</span>
+                    <Title $hideOnMobile={false}>{`${member.role}`}</Title>
                   </Member>
                 )
               })}

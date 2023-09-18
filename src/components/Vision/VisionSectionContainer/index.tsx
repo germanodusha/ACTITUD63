@@ -15,6 +15,9 @@ const VisionSectionContainer: FC<{
 const VisionSectionContainerStyle = styled.div`
   padding-left: 2rem;
   padding-right: 1rem;
+  span {
+    font-size: 2.5rem;
+  }
   @media (max-width: 768px) {
     padding-left: 0;
     padding-right: 0;

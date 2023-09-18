@@ -1,6 +1,7 @@
 import { type FC } from 'react'
 import Section from '../UI/Section'
 import styled from 'styled-components'
+import Title from '../UI/Title'
 const infoData = [
   [
     {
@@ -39,11 +40,7 @@ const Info: FC = () => {
                       marginBottom: '1.5rem'
                     }}
                   >
-                    <span
-                      style={{
-                        textTransform: 'uppercase'
-                      }}
-                    >{`<${info.label}>`}</span>
+                    <Title $hideOnMobile={false}>{`${info.label}`}</Title>
                     <span>
                       <b>{info.value}</b>
                     </span>

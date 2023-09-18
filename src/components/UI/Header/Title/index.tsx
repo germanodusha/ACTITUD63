@@ -11,12 +11,10 @@ const HeaderTitle: FC = () => {
       <style>
         {`
           .title {
-            position: fixed;
-            top: 2rem;
-            right: 1rem;
             font-size: 4vw;
             text-transform: uppercase;
             font-weight: 300;
+            justify-self: end;
           }
           @media (max-width: 768px) {
             .title {

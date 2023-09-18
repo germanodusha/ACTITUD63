@@ -3,7 +3,7 @@ import Typewriter from '../UI/Typewriter'
 import styled from 'styled-components'
 const Landing: FC = () => {
   return (
-    <LandingContainer>
+    <LandingContainer id="about">
       <Typewriter
         prefix="<"
         texts={[
@@ -21,19 +21,30 @@ const Landing: FC = () => {
   )
 }
 const LandingContainer = styled.article`
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   position: relative;
   align-items: center;
   font-size: 2rem;
   padding-left: 2rem;
   padding-right: 1rem;
+  max-width: 100%;
+  span {
+    font-size: 2.5rem;
+  }
+  b {
+    font-size: 2rem;
+    font-weight: 600;
+  }
   @media (max-width: 768px) {
     font-size: 1.25rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    * {
+    span {
       font-size: 1.25rem;
+    }
+    b {
+      font-size: 1rem;
     }
   }
 `

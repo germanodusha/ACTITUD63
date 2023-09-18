@@ -1,5 +1,5 @@
 import Link from '@/components/Services/Link'
-import Image from 'next/image'
+import SlideShow from '@/components/UI/SlideShow'
 import { type FC } from 'react'
 import styled from 'styled-components'
 
@@ -8,15 +8,14 @@ interface ProjectProps {
     title: string
     link: string
     description: string[]
-    image: string
+    images: string[]
   }
 }
 const Project: FC<ProjectProps> = ({ project }) => {
   return (
     <ProjectContainer
       style={{
-        width: '100%',
-        paddingTop: '2rem'
+        width: '100%'
       }}
     >
       <Title>
@@ -45,19 +44,12 @@ const Project: FC<ProjectProps> = ({ project }) => {
       <div
         style={{
           width: '100%',
-          height: '50vw',
-          position: 'relative',
-          marginTop: '2rem'
+          marginTop: '2rem',
+          display: 'flex',
+          justifyContent: 'center'
         }}
       >
-        <Image
-          src={project.image}
-          alt={project.title}
-          fill
-          style={{
-            objectFit: 'contain'
-          }}
-        />
+        <SlideShow images={project.images} />
       </div>
     </ProjectContainer>
   )
@@ -66,7 +58,7 @@ const Title = styled.h1`
   font-size: 4rem;
   width: 100%;
   text-align: center;
-  font-weight: 200;
+  font-weight: 300;
   span {
     font-size: 3rem;
   }
@@ -83,7 +75,7 @@ const LinkContainer = styled.div`
   margin-top: 1rem;
   @media (max-width: 768px) {
     font-size: 1rem;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
   }
 `
 const Stamp = styled.span`
@@ -94,6 +86,7 @@ const Stamp = styled.span`
   }
 `
 const ProjectContainer = styled.div`
+  margin-bottom: 50vh;
   @media (max-width: 768px) {
     margin-bottom: 50vh;
   }

@@ -1,25 +1,24 @@
 import { useScroll } from '@/hooks/useScroll'
 import Image from 'next/image'
-import { type FC, useEffect, useState } from 'react'
+import { type FC } from 'react'
 import styled from 'styled-components'
 
 const HeaderLogo: FC = () => {
   const { scroll } = useScroll()
-  const windowHeight = typeof window !== 'undefined' ? window.innerHeight : 0
-  const [width, setWidth] = useState('95%')
-  const [height, setHeight] = useState('22vh')
-  useEffect(() => {
-    const scrollPercent = Math.floor(((scroll + 1) / windowHeight) * 100)
-    const newWidth = `${Math.max(100 - scrollPercent * 3, 50)}%`
-    const newHeight = `${Math.max(22 - (scrollPercent * 2) / 10, 8)}vh`
-    setWidth(`${newWidth}`)
-    setHeight(`${newHeight}`)
-  }, [scroll, windowHeight])
+  const width = scroll > 0 ? '50%' : '90%'
+  const height = scroll > 0 ? '8vh' : '12vh'
+  const position = scroll > 0 ? 'static' : 'absolute'
+  const transform = scroll > 0 ? 'translateX(0)' : 'translateX(-50%)'
   return (
     <HeaderLogoContainer
       style={{
         width,
-        height
+        height,
+        position,
+        left: '50%',
+        top: '1vh',
+        transform,
+        justifySelf: 'center'
       }}
     >
       <Image
@@ -37,12 +36,13 @@ const HeaderLogoContainer = styled.div`
   min-height: 8vh;
   min-width: 50%;
   max-width: 90%;
-  position: absolute;
   transition:
     width 0.5s,
     height 0.5s;
   top: 1vh;
   left: 50%;
-  transform: translateX(-50%);
+  @media (max-width: 768px) {
+    margin: auto;
+  }
 `
 export default HeaderLogo
