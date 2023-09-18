@@ -11,7 +11,7 @@ const clipData = [
     href: 'https://www.google.com',
     media: {
       type: 'image',
-      src: '/images/image1.jpg'
+      src: '/image1.jpg'
     }
   },
   {
@@ -20,7 +20,7 @@ const clipData = [
     href: 'https://www.google.com',
     media: {
       type: 'image',
-      src: '/images/image2.jpg'
+      src: '/image2.jpg'
     }
   }
 ]

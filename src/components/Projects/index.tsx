@@ -12,7 +12,7 @@ const projectsData = [
       'Occaecat laborum ex ad aute consectetur sint ipsum enim id sit excepteur cillum sint esse. Tempor consectetur Lorem aliqua anim labore ea in voluptate tempor ex aute enim labore laborum. Esse culpa culpa minim deserunt. Culpa est duis cillum dolor minim eiusmod pariatur ex elit velit magna eu ipsum qui.',
       'Pariatur duis nulla excepteur incididunt consequat non laborum ea eiusmod deserunt pariatur ea laboris. Est exercitation amet non exercitation. Exercitation cupidatat exercitation exercitation aliqua veniam in cupidatat. Sunt qui irure do enim cillum minim qui veniam. Labore ut voluptate irure quis mollit elit eiusmod occaecat in eu tempor nostrud ad. Eiusmod in esse cillum irure ad pariatur exercitation culpa.'
     ],
-    image: '/images/image1.jpg'
+    image: '/image1.jpg'
   },
   {
     title: 'Project 2',
@@ -22,7 +22,7 @@ const projectsData = [
       'Occaecat laborum ex ad aute consectetur sint ipsum enim id sit excepteur cillum sint esse. Tempor consectetur Lorem aliqua anim labore ea in voluptate tempor ex aute enim labore laborum. Esse culpa culpa minim deserunt. Culpa est duis cillum dolor minim eiusmod pariatur ex elit velit magna eu ipsum qui.',
       'Pariatur duis nulla excepteur incididunt consequat non laborum ea eiusmod deserunt pariatur ea laboris. Est exercitation amet non exercitation. Exercitation cupidatat exercitation exercitation aliqua veniam in cupidatat. Sunt qui irure do enim cillum minim qui veniam. Labore ut voluptate irure quis mollit elit eiusmod occaecat in eu tempor nostrud ad. Eiusmod in esse cillum irure ad pariatur exercitation culpa.'
     ],
-    image: '/images/image2.jpg'
+    image: '/image2.jpg'
   }
 ]
 const Projects: FC = () => {
