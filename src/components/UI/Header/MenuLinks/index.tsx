@@ -56,7 +56,12 @@ const MenuLinks: FC = () => {
           setShowMenu(false)
         }}
       >
-        <Image src="/images/icon-close.svg" alt="Link menu" width={16} height={16} />
+        <Image
+          src="/images/icon-close.svg"
+          alt="Link menu"
+          width={16}
+          height={16}
+        />
       </span>
       <style>
         {`
