@@ -16,6 +16,7 @@ const HeaderTitle: FC = () => {
             right: 1rem;
             font-size: 4vw;
             text-transform: uppercase;
+            font-weight: 300;
           }
           @media (max-width: 768px) {
             .title {

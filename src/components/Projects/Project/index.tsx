@@ -66,10 +66,12 @@ const Project: FC<ProjectProps> = ({ project }) => {
         }}
       >
         <Image
-          objectFit="contain"
           src={project.image}
           alt={project.title}
           fill
+          style={{
+            objectFit: 'contain'
+          }}
         />
       </div>
     </div>

@@ -53,7 +53,9 @@ const Clipping: FC = () => {
                   src={clip.media.src}
                   alt={clip.description}
                   fill
-                  objectFit="cover"
+                  style={{
+                    objectFit: 'contain'
+                  }}
                 />
               ) : (
                 <video

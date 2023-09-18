@@ -14,46 +14,12 @@ span::after {
   --padding-right: 2rem;
   cursor: url('/cursor/cursor.svg'), auto;
 }
-@font-face {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/DMSans-medium.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'DM Sans';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/DMSans-medium-italic.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/CormorantGaramond-regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/CormorantGaramond-medium-italic.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: url('/fonts/CormorantGaramond-light.ttf') format('truetype');
-}
 b {
   font-family: 'DM Sans', serif;
 }
 * {
   font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
 }
 span {
   font-size: 2rem;
