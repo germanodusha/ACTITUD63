@@ -37,7 +37,7 @@ const MenuLinks: FC = () => {
     >
       <span className="hamburguer-button">
         <Image
-          src="/icone-hamburguer.svg"
+          src="/images/icone-hamburguer.svg"
           alt="Link menu"
           width={32}
           height={32}
@@ -56,7 +56,7 @@ const MenuLinks: FC = () => {
           setShowMenu(false)
         }}
       >
-        <Image src="/icon-close.svg" alt="Link menu" width={16} height={16} />
+        <Image src="/images/icon-close.svg" alt="Link menu" width={16} height={16} />
       </span>
       <style>
         {`
