@@ -30,19 +30,24 @@ const ServicesList: FC = () => {
     >
       {services.map((service, index) => (
         <div key={index}>
-          <Title
-            style={{
-              fontSize: '2rem',
-              fontWeight: 200
-            }}
-          >{`<${service.title}>`}</Title>
+          <Title>{`<${service.title}>`}</Title>
           <Description
             style={{
               fontSize: '1.75rem'
             }}
           >
-            <span>{`<${service.title}> `}</span>
-            <b>{service.description}</b>
+            <span
+              style={{
+                fontWeight: 300
+              }}
+            >{`<${service.title}> `}</span>
+            <b
+              style={{
+                fontWeight: 600
+              }}
+            >
+              {service.description}
+            </b>
           </Description>
         </div>
       ))}
@@ -60,11 +65,11 @@ const Description = styled.p`
   span {
     display: none;
   }
+  margin-bottom: 1rem;
   @media (max-width: 768px) {
     span {
       display: inline;
     }
-    margin-bottom: 1rem;
   }
 `
 export default ServicesList

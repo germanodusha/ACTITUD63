@@ -27,7 +27,7 @@ const projectsData = [
 ]
 const Projects: FC = () => {
   return (
-    <Section noxpadding id="projects" label="projects">
+    <Section noxpadding noypadding id="projects" label="projects">
       {projectsData.map((project, index) => {
         return (
           <>
@@ -50,6 +50,9 @@ const ProjectContainer = styled.div`
   @media (max-width: 768px) {
     margin-left: 1rem;
     margin-right: 1rem;
+    h1 {
+      font-size: 1rem;
+    }
   }
 `
 export default Projects

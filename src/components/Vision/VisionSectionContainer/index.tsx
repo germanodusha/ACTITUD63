@@ -18,6 +18,9 @@ const VisionSectionContainerStyle = styled.div`
   @media (max-width: 768px) {
     padding-left: 0;
     padding-right: 0;
+    b {
+      font-size: 1.5rem;
+    }
   }
 `
 export default VisionSectionContainer

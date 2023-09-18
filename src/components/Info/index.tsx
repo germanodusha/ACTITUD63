@@ -62,15 +62,15 @@ const InfoContainer = styled.div<{
 }>`
   display: grid;
   grid-template-columns: repeat(${({ $columns }) => $columns}, 1fr);
-  padding-bottom: 3rem;
   gap: 1rem;
+  padding-bottom: 10rem;
+  min-height: 65vh;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 0;
   }
 `
 const InfoItem = styled.div`
-  display: grid;
   grid-auto-flow: row;
   margin-bottom: 1.5rem;
   @media (max-width: 768px) {

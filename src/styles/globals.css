@@ -15,18 +15,21 @@ span::after {
   cursor: url('/cursor/cursor.svg'), auto;
 }
 b {
-  font-family: 'DM Sans', serif;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
 }
 * {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond';
   font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
 }
 span {
   font-size: 2rem;
 }
-b {
-  font-size: 1.75rem;
-}
+
 .mobile-title {
   display: none;
   font-size: 1rem;

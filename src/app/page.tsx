@@ -8,6 +8,7 @@ import Team from '@/components/Team'
 import Divider from '@/components/UI/Divider'
 import Header from '@/components/UI/Header'
 import Vision from '@/components/Vision'
+import Missions from '@/components/Missions'
 import { SectionProvider } from '@/contexts/Sections'
 import { type FC } from 'react'
 const Home: FC = () => {
@@ -16,6 +17,8 @@ const Home: FC = () => {
       <Header />
       <Landing />
       <Vision />
+      <Divider direction="horizontal" />
+      <Missions />
       <Divider direction="horizontal" />
       <Services />
       <Divider direction="horizontal" />

@@ -72,7 +72,7 @@ const MenuLinks: FC = () => {
                   position: fixed;
                   top: 2rem;
                   left: 1rem;
-                  background: rgba(0, 0, 0, 0.7);
+                  background: rgba(0, 0, 0, 0.3);
                   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px -4px 4px rgba(0, 0, 0, 0.25);
                   z-index: 1;
                   padding: 0.5rem 0.5rem;
@@ -103,10 +103,12 @@ const MenuLinks: FC = () => {
                   color: white;
                   border-radius: 2rem;
                   padding: 0.25rem 0.5rem;
-                  border: 2px solid white;
                   opacity: 1;
                   font-weight: semibold;
                   margin-right: 0.25rem;
+                  border: 3px transparent solid;
+                transition: all 0.5s;
+
               }
               .show-menu {
                 width: 300px;
@@ -122,8 +124,7 @@ const MenuLinks: FC = () => {
                 width: 0;
               }
               .link-container li:hover {
-                background: rgba(255, 255, 255, 0.7);
-                color: black;
+                border: 3px rgba(255, 255, 255, 0.7) solid;
               }
               @media (max-width: 768px) {
                 .link-container {
@@ -176,12 +177,20 @@ const HeaderLink: FC<{ href: string; label: string }> = ({ href, label }) => {
   }
   return (
     <li onClick={handleScroll}>
-      <Link href={href}>{label}</Link>
+      <Link
+        href={href}
+        style={{
+          fontFamily: 'DM Sans, sans-serif'
+        }}
+      >
+        {label}
+      </Link>
       <style>
         {`
               * {
                 scroll-behavior: ${isSmoothScroll ? 'smooth' : 'auto'};
             }
+
           `}
       </style>
     </li>

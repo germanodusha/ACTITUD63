@@ -80,7 +80,8 @@ const Description = styled.p`
   text-align: center;
   margin-bottom: 2rem;
   @media (max-width: 768px) {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    text-transform: uppercase;
   }
 `
 const Media = styled.div`

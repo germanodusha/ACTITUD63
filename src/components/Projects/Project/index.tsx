@@ -1,6 +1,7 @@
 import Link from '@/components/Services/Link'
 import Image from 'next/image'
 import { type FC } from 'react'
+import styled from 'styled-components'
 
 interface ProjectProps {
   project: {
@@ -12,37 +13,21 @@ interface ProjectProps {
 }
 const Project: FC<ProjectProps> = ({ project }) => {
   return (
-    <div
+    <ProjectContainer
       style={{
         width: '100%',
         paddingTop: '2rem'
       }}
     >
-      <h1
-        style={{
-          fontSize: '3rem',
-          width: '100%',
-          textAlign: 'center',
-          fontWeight: 200
-        }}
-      >{`<${project.title}>`}</h1>
-      <div
-        style={{
-          textAlign: 'center',
-          fontSize: '2rem',
-          marginTop: '1rem'
-        }}
-      >
+      <Title>
+        <span>{`<`}</span>
+        {`${project.title}`}
+        <span>{`>`}</span>
+      </Title>
+      <LinkContainer>
         <Link href={project.link} />
-      </div>
-      <span
-        style={{
-          textTransform: 'uppercase',
-          fontSize: '1rem'
-        }}
-      >
-        Digital, 2023
-      </span>
+      </LinkContainer>
+      <Stamp>Digital, 2023</Stamp>
       {project.description.map((paragraph, index) => {
         return (
           <p
@@ -74,7 +59,43 @@ const Project: FC<ProjectProps> = ({ project }) => {
           }}
         />
       </div>
-    </div>
+    </ProjectContainer>
   )
 }
+const Title = styled.h1`
+  font-size: 4rem;
+  width: 100%;
+  text-align: center;
+  font-weight: 200;
+  span {
+    font-size: 3rem;
+  }
+  @media (max-width: 768px) {
+    font-size: 1.25rem !important;
+    span {
+      font-size: 1rem;
+    }
+  }
+`
+const LinkContainer = styled.div`
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 1rem;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 6rem;
+  }
+`
+const Stamp = styled.span`
+  font-size: 1rem;
+  text-transform: uppercase;
+  @media (max-width: 768px) {
+    font-size: 0.6rem;
+  }
+`
+const ProjectContainer = styled.div`
+  @media (max-width: 768px) {
+    margin-bottom: 50vh;
+  }
+`
 export default Project
