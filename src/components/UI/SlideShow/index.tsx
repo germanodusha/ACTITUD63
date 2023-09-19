@@ -6,14 +6,6 @@ const SlideShow: FC<{ images: string[] }> = ({ images }) => {
   const [index, setIndex] = useState(0)
   return (
     <Container>
-      <LeftSection
-        onClick={() => {
-          if (index > 0) {
-            setIndex(index - 1)
-          }
-        }}
-      />
-
       <Wrapper>
         <ImageGrid $index={index} $numberOfImages={images.length}>
           {images.map((image, index) => (
@@ -30,6 +22,13 @@ const SlideShow: FC<{ images: string[] }> = ({ images }) => {
           ))}
         </ImageGrid>
       </Wrapper>
+      <LeftSection
+        onClick={() => {
+          if (index > 0) {
+            setIndex(index - 1)
+          }
+        }}
+      />
       <RightSection
         onClick={() => {
           if (index < images.length - 1) {
@@ -71,7 +70,7 @@ const LeftSection = styled.div`
   height: 100%;
   position: absolute;
   left: 0;
-  z-index: 1;
+  bottom: 0;
   cursor: url('/cursor-left.svg'), auto;
 `
 const RightSection = styled.div`
