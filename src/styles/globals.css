@@ -9,7 +9,7 @@ span::after {
   content: attr(after);
 }
 :root {
-  --header-height: 11vh;
+  --header-height: 12vh;
   --padding-left: 1rem;
   --padding-right: 2rem;
   --menu-links-shadow: inset 1px 1px 5px 0px rgba(255, 255, 255, 0.2),

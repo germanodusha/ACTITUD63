@@ -5,18 +5,12 @@ import styled from 'styled-components'
 
 const HeaderLogo: FC = () => {
   const { scroll } = useScroll()
-  const width = scroll > 0 ? '50%' : '90%'
-  const height = scroll > 0 ? '8vh' : '12vh'
-  const position = scroll > 0 ? 'static' : 'absolute'
-  const transform = scroll > 0 ? 'translateX(0)' : 'translateX(-50%)'
+  const transform =
+    scroll > 0 ? 'scale(1) translateY(0%)' : 'scale(2.5) translateY(15%)'
   return (
     <HeaderLogoContainer
       style={{
-        width,
-        height,
-        position,
-        left: '50%',
-        top: '1vh',
+        transition: 'transform 0.5s',
         transform,
         justifySelf: 'center'
       }}
@@ -33,8 +27,8 @@ const HeaderLogo: FC = () => {
   )
 }
 const HeaderLogoContainer = styled.div`
-  min-height: 8vh;
-  min-width: 50%;
+  min-height: 12vh;
+  min-width: 70%;
   max-width: 90%;
   transition:
     width 0.5s,

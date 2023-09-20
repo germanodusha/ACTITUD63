@@ -8,13 +8,13 @@ const SlideShow: FC<{ images: string[] }> = ({ images }) => {
   const [y, setY] = useState(0)
   const [imageSrc, setImageSrc] = useState('/cursor-left.svg')
   const [display, setDisplay] = useState('none' as 'none' | 'block' | 'flex')
-  const addImageOnCursor = (src: string) => {
+  const addImageOnCursor = (src: string): void => {
     setImageSrc(src)
     setDisplay('block')
   }
-  const moveImageOnCursor = (event: any) => {
+  const moveImageOnCursor = (event: any): void => {
     const { clientX, clientY } = event
-    const x = clientX - 64 / 2 
+    const x = clientX - 64 / 2
     const y = clientY - 64 / 2
     setX(x)
     setY(y)
@@ -70,6 +70,13 @@ const SlideShow: FC<{ images: string[] }> = ({ images }) => {
           ))}
         </ImageGrid>
       </Wrapper>
+      <LeftSection
+        onClick={() => {
+          if (index > 0) {
+            setIndex(index - 1)
+          }
+        }}
+      />
       <RightSection
         onClick={() => {
           if (index < images.length - 1) {
@@ -115,8 +122,13 @@ const LeftSection = styled.div`
   height: 100%;
   position: absolute;
   left: 0;
+<<<<<<< HEAD
   z-index: 1;
   cursor: none;
+=======
+  bottom: 0;
+  cursor: url('/cursor-left.svg'), auto;
+>>>>>>> 31a311aeb074c971e18a79c8f950276b818413bd
 `
 const RightSection = styled.div`
   width: 50%;

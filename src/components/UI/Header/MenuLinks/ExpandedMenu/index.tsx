@@ -100,6 +100,9 @@ const CloseButtonContainer = styled.span`
   align-items: center;
   border-radius: 3rem;
   margin-right: 0.5rem;
+  @media (min-width: 768px) {
+    display: none;
+  }
 `
 const MenuList: FC<{
   links: Array<{
@@ -160,7 +163,7 @@ const HeaderLinkContainer = styled.li`
   border-radius: 3rem;
   padding: 0rem 1rem;
   transition: border 0.2s ease-in-out;
-  font-weight: 100;
+  font-weight: 500 !important;
   font-size: 1.5rem;
   &:hover {
     border: 3px solid white;
