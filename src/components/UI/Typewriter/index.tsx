@@ -77,7 +77,7 @@ const Typewriter: FC<{
           isTypedStarted.current = true
           startTyping()
         }
-      }, 2000)
+      }, 1300)
     }
   }, [startTyping, scroll])
   return (
