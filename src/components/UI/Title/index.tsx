@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const TitleStyled = styled.h1<{
   $hideOnMobile: boolean
 }>`
-  font-size: 3rem;
+  font-size: 1.75rem;
   font-weight: 300;
   text-transform: uppercase;
   span {

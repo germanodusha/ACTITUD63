@@ -1,6 +1,9 @@
 import { type ReactElement } from 'react'
+
+import '@/styles/fonts.css'
 import '@/styles/globals.css'
 import StyledComponentsRegistry from '@/lib/registry'
+
 export const metadata = {
   title: 'ACTITUD-63',
   description: 'ACTITUD-63'

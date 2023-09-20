@@ -5,38 +5,46 @@ import styled from 'styled-components'
 
 const HeaderLogo: FC = () => {
   const { scroll } = useScroll()
-  const transform =
-    scroll > 0 ? 'scale(1) translateY(0%)' : 'scale(2.5) translateY(15%)'
+  const height = scroll > 0 ? '9vh' : '30vh'
   return (
-    <HeaderLogoContainer
-      style={{
-        transition: 'transform 0.5s',
-        transform,
-        justifySelf: 'center'
-      }}
-    >
-      <Image
-        src="/images/header-logo.svg"
-        alt="logo"
-        fill
-        style={{
-          objectFit: 'contain'
-        }}
-      />
+    <HeaderLogoContainer $scroll={scroll > 0}>
+      <div style={{ height }}>
+        <Image fill src="/images/header-logo.svg" alt="logo" />
+      </div>
     </HeaderLogoContainer>
   )
 }
-const HeaderLogoContainer = styled.div`
+const HeaderLogoContainer = styled.div<{
+  $scroll: boolean
+}>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   min-height: 12vh;
-  min-width: 70%;
-  max-width: 90%;
   transition:
     width 0.5s,
     height 0.5s;
-  top: 1vh;
-  left: 50%;
+  transition: all 0.5s;
+  height: 100%;
+  width: 100%;
+  div {
+    transition:
+      height 0.5s,
+      width 0.5s;
+    position: fixed;
+    height: 9vh;
+    object-fit: contain;
+    top: 1vh;
+    width: 100%;
+    left: 0;
+  }
   @media (max-width: 768px) {
     margin: auto;
+    div {
+      height: 10vh;
+      max-height: 23vh;
+    }
   }
 `
 export default HeaderLogo

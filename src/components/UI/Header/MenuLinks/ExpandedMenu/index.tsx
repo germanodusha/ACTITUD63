@@ -121,7 +121,7 @@ const MenuList: FC<{
 const LinkListContainer = styled.ul`
   display: flex;
   & > li {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
   }
   @media (max-width: 768px) {
     & > li {
@@ -143,7 +143,8 @@ const HeaderLink: FC<{ href: string; label: string }> = ({ href, label }) => {
       <Link
         href={href}
         style={{
-          fontFamily: 'DM Sans, sans-serif'
+          fontFamily: 'DM Sans, sans-serif',
+          fontWeight: 200
         }}
       >
         {label}
@@ -161,16 +162,14 @@ const HeaderLink: FC<{ href: string; label: string }> = ({ href, label }) => {
 const HeaderLinkContainer = styled.li`
   border: 3px solid transparent;
   border-radius: 3rem;
-  padding: 0rem 1rem;
+  padding: 0.25rem 1rem;
   transition: border 0.2s ease-in-out;
-  font-weight: 500 !important;
+  font-weight: 100;
   font-size: 1.5rem;
   &:hover {
     border: 3px solid white;
   }
-  * {
-    cursor: url('/cursor.svg'), auto;
-  }
+
   @media (max-width: 768px) {
     font-size: 1rem;
     padding: 0rem 0.5rem;

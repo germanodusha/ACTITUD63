@@ -33,6 +33,7 @@ const MenuLinks: FC = () => {
 }
 const MenuLinksContainer = styled.nav`
   position: relative;
+  z-index: 10;
   @media (max-width: 768px) {
     position: fixed;
     left: 1rem;

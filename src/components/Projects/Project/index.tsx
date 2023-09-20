@@ -58,7 +58,7 @@ const Title = styled.h1`
   font-size: 4rem;
   width: 100%;
   text-align: center;
-  font-weight: 300;
+  font-weight: 300 !important;
   span {
     font-size: 3rem;
   }
@@ -73,9 +73,10 @@ const LinkContainer = styled.div`
   text-align: center;
   font-size: 2rem;
   margin-top: 1rem;
+  margin-bottom: 3rem;
   @media (max-width: 768px) {
     font-size: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
   }
 `
 const Stamp = styled.span`

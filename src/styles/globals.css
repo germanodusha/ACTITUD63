@@ -24,11 +24,9 @@ b {
   font-weight: 600;
 }
 * {
-  font-family: 'Cormorant Garamond';
+  font-family: 'Cormorant Garamond', sans-serif;
+  line-height: 1;
   font-weight: 300;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
 }
 span {
   font-size: 2rem;
