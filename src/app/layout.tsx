@@ -3,7 +3,6 @@ import { type ReactElement } from 'react'
 import '@/styles/fonts.css'
 import '@/styles/globals.css'
 import StyledComponentsRegistry from '@/lib/registry'
-import Head from 'next/head'
 
 export const metadata = {
   title: 'ACTITUD-63',
