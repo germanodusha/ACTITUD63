@@ -5,7 +5,7 @@ import '@/styles/globals.css'
 import StyledComponentsRegistry from '@/lib/registry'
 
 export const metadata = {
-  title: 'ACTITUD-63',
+  title: 'Actitud1963',
   description: 'ACTITUD-63'
 }
 
