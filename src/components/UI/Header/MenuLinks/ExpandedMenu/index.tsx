@@ -144,7 +144,7 @@ const HeaderLink: FC<{ href: string; label: string }> = ({ href, label }) => {
         href={href}
         style={{
           fontFamily: 'DM Sans, sans-serif',
-          fontWeight: 200
+          fontWeight: 400
         }}
       >
         {label}
