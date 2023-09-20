@@ -14,7 +14,7 @@ const Landing: FC = () => {
           },
           { text: ' aliqua', isBold: true }
         ]}
-        delay={100}
+        delay={50}
         suffix=">"
       />
     </LandingContainer>
