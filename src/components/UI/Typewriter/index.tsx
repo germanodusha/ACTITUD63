@@ -1,4 +1,5 @@
-import { type FC, useState, useEffect, useCallback } from 'react'
+import { useScroll } from '@/hooks/useScroll';
+import { type FC, useState, useEffect, useCallback, useRef } from 'react'
 
 const sleep = async (ms: number): Promise<NodeJS.Timeout> =>
   await new Promise((resolve) => setTimeout(resolve, ms))
@@ -8,6 +9,8 @@ const Typewriter: FC<{
   prefix?: string
   suffix?: string
 }> = ({ texts, delay, prefix = '', suffix = '' }) => {
+  const {scroll} = useScroll()
+  const isTypedStarted = useRef(false)
   const [renderedText, setRenderedText] = useState('')
   const type = useCallback(
     function ({
@@ -68,8 +71,15 @@ const Typewriter: FC<{
   )
 
   useEffect(() => {
-    startTyping()
-  }, [startTyping])
+    if (scroll > 0) {
+      setTimeout(() => {
+        if (!isTypedStarted.current) {
+          isTypedStarted.current = true
+          startTyping()
+        }
+      }, 1000)
+    }
+  }, [startTyping, scroll])
   return (
     <div>
       <span
