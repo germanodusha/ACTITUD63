@@ -122,13 +122,8 @@ const LeftSection = styled.div`
   height: 100%;
   position: absolute;
   left: 0;
-<<<<<<< HEAD
   z-index: 1;
   cursor: none;
-=======
-  bottom: 0;
-  cursor: url('/cursor-left.svg'), auto;
->>>>>>> 31a311aeb074c971e18a79c8f950276b818413bd
 `
 const RightSection = styled.div`
   width: 50%;
