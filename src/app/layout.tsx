@@ -17,9 +17,6 @@ export default function RootLayout({
 }): ReactElement {
   return (
     <html lang="en">
-      <Head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </Head>
       <body>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
