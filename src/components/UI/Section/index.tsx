@@ -31,7 +31,7 @@ const StyledSection = styled.section<{
   $noypadding: string
   $noxpadding: boolean
 }>`
-  padding-left: ${({ $noxpadding }) => ($noxpadding ? 0 : '1rem')};
+  padding-left: ${({ $noxpadding }) => ($noxpadding ? 0 : '2rem')};
   padding-right: ${({ $noxpadding }) => ($noxpadding ? 0 : '2rem')};
   padding-top: ${({ $noypadding }) => ($noypadding === 'true' ? 0 : '1rem')};
   padding-bottom: ${({ $noypadding }) => ($noypadding === 'true' ? 0 : '7rem')};

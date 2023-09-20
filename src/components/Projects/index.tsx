@@ -57,7 +57,7 @@ const TitleContainer = styled.div`
 `
 const ProjectContainer = styled.div`
   margin-left: 2rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
   padding-top: 2rem;
   @media (max-width: 768px) {
     margin-left: 1rem;

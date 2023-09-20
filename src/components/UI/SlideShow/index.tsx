@@ -4,14 +4,54 @@ import styled from 'styled-components'
 
 const SlideShow: FC<{ images: string[] }> = ({ images }) => {
   const [index, setIndex] = useState(0)
+  const [x, setX] = useState(0)
+  const [y, setY] = useState(0)
+  const [imageSrc, setImageSrc] = useState('/cursor-left.svg')
+  const [display, setDisplay] = useState('none' as 'none' | 'block' | 'flex')
+  const addImageOnCursor = (src: string) => {
+    setImageSrc(src)
+    setDisplay('block')
+  }
+  const moveImageOnCursor = (event: any) => {
+    const { clientX, clientY } = event
+    const x = clientX - 64 / 2 
+    const y = clientY - 64 / 2
+    setX(x)
+    setY(y)
+  }
   return (
-    <Container>
+    <Container
+      onMouseLeave={() => {
+        setDisplay('none')
+      }}
+    >
+      <img
+        src={imageSrc}
+        alt="cursor"
+        style={{
+          position: 'fixed',
+          left: `${x}px`,
+          top: `${y}px`,
+          display,
+          zIndex: 20,
+          background: `url(${imageSrc})`,
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
+          width: '64px',
+          height: '64px',
+          pointerEvents: 'none'
+        }}
+      />
       <LeftSection
         onClick={() => {
           if (index > 0) {
             setIndex(index - 1)
           }
         }}
+        onMouseEnter={() => {
+          addImageOnCursor('/cursor-left.svg')
+        }}
+        onMouseMove={moveImageOnCursor}
       />
 
       <Wrapper>
@@ -36,6 +76,10 @@ const SlideShow: FC<{ images: string[] }> = ({ images }) => {
             setIndex(index + 1)
           }
         }}
+        onMouseEnter={() => {
+          addImageOnCursor('/cursor-right.svg')
+        }}
+        onMouseMove={moveImageOnCursor}
       />
     </Container>
   )
@@ -72,7 +116,7 @@ const LeftSection = styled.div`
   position: absolute;
   left: 0;
   z-index: 1;
-  cursor: url('/cursor-left.svg'), auto;
+  cursor: none;
 `
 const RightSection = styled.div`
   width: 50%;
@@ -80,7 +124,7 @@ const RightSection = styled.div`
   position: absolute;
   right: 0;
   bottom: 0;
-  cursor: url('/cursor-right.svg'), auto;
+  cursor: none;
 `
 const Container = styled.div`
   width: 100%;
