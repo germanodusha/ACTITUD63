@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 const HeaderLogo: FC = () => {
   const { scroll } = useScroll()
-  const height = scroll > 0 ? '9vh' : '30vh'
+  const height = scroll > 0 ? '10vh' : '30vh'
   return (
     <HeaderLogoContainer $scroll={scroll > 0}>
       <div style={{ height }}>
