@@ -16,37 +16,37 @@ export default function manifest(): MetadataRoute.Manifest {
         type: 'image/x-icon'
       },
       {
-        src: '/manifest/favicon-16x16.png',
+        src: '/favicon-16x16.png',
         sizes: '16x16',
         type: 'image/png'
       },
       {
-        src: '/manifest/favicon-32x32.png',
+        src: '/favicon-32x32.png',
         sizes: '32x32',
         type: 'image/png'
       },
       {
-        src: '/manifest/apple-touch-icon.png',
+        src: '/apple-touch-icon.png',
         sizes: '180x180',
         type: 'image/png'
       },
       {
-        src: '/manifest/android-chrome-16x16.png',
+        src: '/android-chrome-16x16.png',
         sizes: '16x16',
         type: 'image/png'
       },
       {
-        src: '/manifest/android-chrome-32x32.png',
+        src: '/android-chrome-32x32.png',
         sizes: '32x32',
         type: 'image/png'
       },
       {
-        src: '/manifest/android-chrome-192x192.png',
+        src: '/android-chrome-192x192.png',
         sizes: '192x192',
         type: 'image/png'
       },
       {
-        src: '/manifest/android-chrome-512x512.png',
+        src: '/android-chrome-512x512.png',
         sizes: '512x512',
         type: 'image/png'
       }
