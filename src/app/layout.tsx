@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="mask-icon" href="/safari-icon.svg" />
+        <link rel="mask-icon" href="/safari-icon.svg" color='#a6a6a6'/>
       </head>
       <body>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
