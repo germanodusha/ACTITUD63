@@ -1,18 +1,24 @@
-import { type FC, useState } from 'react'
+import { type FC, useState, useEffect } from 'react'
 import ExpandedMenu from './ExpandedMenu'
 import HamburguerButton from './HamburguerButton'
 import styled from 'styled-components'
 
 const MenuLinks: FC = () => {
   const [showMenu, setShowMenu] = useState(false)
-  const hoverSound = new Audio('/hover.mp3')
+  const [sound, setSound] = useState<HTMLAudioElement | null>(null)
+  useEffect(() => {
+    const hoverSound = new Audio('/sounds/hover.wav')
+    setSound(hoverSound)
+  }, [])
   return (
     <MenuLinksContainer
       onClick={() => {
         setShowMenu(true)
       }}
       onMouseEnter={() => {
-        void hoverSound.play()
+        if (sound !== null) {
+          void sound.play()
+        }
         setShowMenu(true)
       }}
       onMouseLeave={() => {
