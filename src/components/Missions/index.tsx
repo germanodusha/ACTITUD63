@@ -15,7 +15,7 @@ const Missions: FC = () => {
       <span className="mobile-title">{`<MISSIONS>`}</span>
       <List
         style={{
-          marginBottom: '10rem',
+          marginBottom: '10rem'
         }}
       >
         {VisionList.map((item, index) => (

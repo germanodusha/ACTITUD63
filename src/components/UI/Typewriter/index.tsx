@@ -1,5 +1,4 @@
-import { useScroll } from '@/hooks/useScroll'
-import { type FC, useState, useEffect, useCallback, useRef } from 'react'
+import { type FC, useState, useEffect, useCallback } from 'react'
 
 const sleep = async (ms: number): Promise<NodeJS.Timeout> =>
   await new Promise((resolve) => setTimeout(resolve, ms))
