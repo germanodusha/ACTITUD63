@@ -18,7 +18,7 @@ interface SectionContext {
 }
 const sectionContext = createContext<SectionContext>({
   sections: [],
-  resgisterSection: () => {}
+  resgisterSection: () => { }
 })
 const SectionProvider: FC<{
   children: ReactNode
