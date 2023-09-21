@@ -49,7 +49,7 @@ const ServicesList: FC = () => {
             >{`<${service.title}> `}</span>
             <b
               style={{
-                fontWeight: 600
+                fontWeight: 400
               }}
             >
               {service.description}

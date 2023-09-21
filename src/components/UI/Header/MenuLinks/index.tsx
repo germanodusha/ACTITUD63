@@ -5,13 +5,14 @@ import styled from 'styled-components'
 
 const MenuLinks: FC = () => {
   const [showMenu, setShowMenu] = useState(false)
-
+  const hoverSound = new Audio('/hover.mp3')
   return (
     <MenuLinksContainer
       onClick={() => {
         setShowMenu(true)
       }}
       onMouseEnter={() => {
+        void hoverSound.play()
         setShowMenu(true)
       }}
       onMouseLeave={() => {

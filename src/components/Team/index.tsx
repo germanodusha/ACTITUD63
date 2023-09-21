@@ -42,7 +42,13 @@ const Team: FC = () => {
                     }}
                   >
                     <span>
-                      <b>{member.name}</b>
+                      <b
+                        style={{
+                          fontWeight: 500
+                        }}
+                      >
+                        {member.name}
+                      </b>
                     </span>
                     <Title $hideOnMobile={false}>{`${member.role}`}</Title>
                   </Member>

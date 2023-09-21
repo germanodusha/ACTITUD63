@@ -6,7 +6,9 @@ const Vision: FC = () => {
   return (
     <VisionSectionContainer>
       <Text>
-        <b>
+        <b style={{
+          fontSize: '3.5rem'
+        }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
           efficitur dignissim accumsan. Integer in ipsum mattis, faucibus justo
           sit amet, pharetra nibh. Ut consectetur aliquam lectus eu tincidunt.

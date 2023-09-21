@@ -34,7 +34,7 @@ const LandingContainer = styled.article`
   }
   b {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 400;
   }
   @media (max-width: 768px) {
     font-size: 1.25rem;

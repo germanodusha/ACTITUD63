@@ -12,10 +12,10 @@ span::after {
   --header-height: 12vh;
   --padding-left: 1rem;
   --padding-right: 2rem;
-  --menu-links-shadow: inset 1px 1px 5px 0px rgba(255, 255, 255, 0.2),
-  inset -1px -1px 5px 0px rgba(255, 255, 255, 0.2),
-  1px 1px 3px 0px rgba(0, 0, 0, 0.25),
-  -1px -1px 3px 0px rgba(0, 0, 0, 0.25);
+  --menu-links-shadow: inset 1px 1px 10px 0px rgba(255, 255, 255, 1),
+  inset -1px -1px 10px 0px rgba(255, 255, 255, 1),
+  1px 1px 5px 0px rgba(0, 0, 0, 0.3),
+  -1px -1px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 b {

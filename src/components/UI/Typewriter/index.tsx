@@ -9,8 +9,6 @@ const Typewriter: FC<{
   prefix?: string
   suffix?: string
 }> = ({ texts, delay, prefix = '', suffix = '' }) => {
-  const { scroll } = useScroll()
-  const isTypedStarted = useRef(false)
   const [renderedText, setRenderedText] = useState('')
   const type = useCallback(
     function ({
@@ -71,15 +69,8 @@ const Typewriter: FC<{
   )
 
   useEffect(() => {
-    if (scroll > 0) {
-      setTimeout(() => {
-        if (!isTypedStarted.current) {
-          isTypedStarted.current = true
-          startTyping()
-        }
-      }, 1500)
-    }
-  }, [startTyping, scroll])
+    startTyping()
+  }, [startTyping])
   return (
     <div>
       <span

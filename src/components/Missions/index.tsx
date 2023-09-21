@@ -16,7 +16,6 @@ const Missions: FC = () => {
       <List
         style={{
           marginBottom: '10rem',
-          marginTop: '1rem'
         }}
       >
         {VisionList.map((item, index) => (

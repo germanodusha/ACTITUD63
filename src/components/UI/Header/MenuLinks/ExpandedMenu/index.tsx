@@ -33,7 +33,7 @@ const ExpandedMenuContainer = styled.div`
   box-shadow: var(--menu-links-shadow);
   border-radius: 3rem;
   padding: 0.25rem 0;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   position: absolute;
   left: 0;
   top: 50%;
@@ -41,14 +41,19 @@ const ExpandedMenuContainer = styled.div`
   background: rgba(0, 0, 0, 0.3);
   color: white;
   max-width: fit-content;
-  animation: expand 0.7s ease-in-out;
+  animation: expand 0.5s ease-in-out;
   z-index: 10;
   @keyframes expand {
-    from {
-      width: 30%;
+    0% {
+      width: 64px;
+      color: transparent;
     }
-    to {
+    50% {
       width: 1000px;
+    }
+    100% {
+      width: 1000px;
+      color: white;
     }
   }
   @keyframes darken {
