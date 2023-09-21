@@ -7,10 +7,7 @@ import Head from 'next/head'
 
 export const metadata = {
   title: 'Actitud1963',
-  description: 'ACTITUD-63',
-  icons: {
-    'mask-icon': '/safari-pinned-tab.svg'
-  }
+  description: 'ACTITUD-63'
 }
 
 export default function RootLayout({
@@ -20,9 +17,6 @@ export default function RootLayout({
 }): ReactElement {
   return (
     <html lang="en">
-      <Head>
-        <link rel="mask-icon" href="/icon.svg" color="#ececec" />
-      </Head>
       <body>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>

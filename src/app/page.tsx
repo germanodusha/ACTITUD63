@@ -11,9 +11,13 @@ import Vision from '@/components/Vision'
 import Missions from '@/components/Missions'
 import { SectionProvider } from '@/contexts/Sections'
 import { type FC } from 'react'
+import Head from 'next/head'
 const Home: FC = () => {
   return (
     <SectionProvider>
+      <Head>
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ececec" />
+      </Head>
       <Header />
       <Landing />
       <Vision />
