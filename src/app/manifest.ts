@@ -19,11 +19,6 @@ export default function manifest(): MetadataRoute.Manifest {
         src: '/icon-512x512.png',
         sizes: '512x512',
         type: 'image/png'
-      },
-      {
-        src: '/safari-pinned-tab.svg',
-        sizes: '180x180',
-        type: 'image/svg+xml'
       }
     ]
   }
