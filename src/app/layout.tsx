@@ -3,11 +3,13 @@ import { type ReactElement } from 'react'
 import '@/styles/fonts.css'
 import '@/styles/globals.css'
 import StyledComponentsRegistry from '@/lib/registry'
-import Head from 'next/head'
 
 export const metadata = {
   title: 'Actitud1963',
-  description: 'ACTITUD-63'
+  description: 'ACTITUD-63',
+  other: {
+    'mask-icon': '/safari-pinned-tab.svg'
+  }
 }
 
 export default function RootLayout({
