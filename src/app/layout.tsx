@@ -7,7 +7,8 @@ import Head from 'next/head'
 
 export const metadata = {
   title: 'Actitud1963',
-  description: 'ACTITUD-63'
+  description: 'ACTITUD-63',
+  'mask-icon': '/safari-pinned-tab.svg'
 }
 
 export default function RootLayout({
