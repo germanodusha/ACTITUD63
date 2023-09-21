@@ -8,7 +8,7 @@ import Head from 'next/head'
 export const metadata = {
   title: 'Actitud1963',
   description: 'ACTITUD-63',
-  icons:{
+  icons: {
     'mask-icon': '/safari-pinned-tab.svg'
   }
 }
