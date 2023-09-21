@@ -3,12 +3,18 @@ import { type ReactElement } from 'react'
 import '@/styles/fonts.css'
 import '@/styles/globals.css'
 import StyledComponentsRegistry from '@/lib/registry'
+import { type Metadata } from 'next'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Actitud1963',
   description: 'ACTITUD-63',
-  other: {
-    'mask-icon': '/safari-pinned-tab.svg'
+  icons: {
+    other: {
+      url: '/icon.svg',
+      type: 'image/svg+xml',
+      color: '#000000',
+      rel: 'mask-icon'
+    }
   }
 }
 
@@ -19,6 +25,9 @@ export default function RootLayout({
 }): ReactElement {
   return (
     <html lang="en">
+      <head>
+        <link rel="mask-icon" href="/safari-icon.svg" />
+      </head>
       <body>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
