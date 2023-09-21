@@ -49,7 +49,8 @@ const useTitle = (): string => {
         return undefined
       })
       .filter((section) => section !== undefined)
-    const headerHeight = window.innerHeight * 0.3
+    const headerHeight = window.innerHeight * 0.4
+    console.log(headerHeight)
     const section = sectionsPositions
       .filter((section) => (section?.position ?? 0) <= scroll + headerHeight)
       .pop()
