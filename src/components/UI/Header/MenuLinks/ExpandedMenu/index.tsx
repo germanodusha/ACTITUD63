@@ -56,14 +56,7 @@ const ExpandedMenuContainer = styled.div`
       color: white;
     }
   }
-  @keyframes darken {
-    from {
-      background: rgba(0, 0, 0, 0.3);
-    }
-    to {
-      background: rgba(0, 0, 0, 0.8);
-    }
-  }
+
   @media (max-width: 768px) {
     font-size: 1.25rem;
     padding-left: 0;
@@ -74,7 +67,6 @@ const ExpandedMenuContainer = styled.div`
     animation:
       darken 0.7s ease-in-out,
       expand 0.7s ease-in-out;
-    background: rgba(0, 0, 0, 0.8);
   }
 `
 const CloseButton: FC<{

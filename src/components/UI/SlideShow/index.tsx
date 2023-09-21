@@ -25,7 +25,7 @@ const SlideShow: FC<{ images: string[] }> = ({ images }) => {
         setDisplay('none')
       }}
     >
-      <img
+      <ArrowContainer
         src={imageSrc}
         alt="cursor"
         style={{
@@ -91,6 +91,11 @@ const SlideShow: FC<{ images: string[] }> = ({ images }) => {
     </Container>
   )
 }
+const ArrowContainer = styled.img`
+  @media (max-width: 768px) {
+    display: none;
+  }
+`
 const ImageContainer = styled.div`
   width: 100%;
   height: 100%;

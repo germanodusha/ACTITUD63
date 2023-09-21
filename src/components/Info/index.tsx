@@ -65,6 +65,8 @@ const InfoContainer = styled.div<{
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 0;
+    display: flex;
+    flex-direction: column;
   }
 `
 const InfoItem = styled.div`

@@ -38,6 +38,7 @@ const StyledSection = styled.section<{
   @media (max-width: 768px) {
     padding-left: ${({ $noxpadding }) => ($noxpadding ? 0 : '1rem')};
     padding-right: ${({ $noxpadding }) => ($noxpadding ? 0 : '1rem')};
+    padding-top: ${({ $noypadding }) => ($noypadding === 'true' ? 0 : '1rem')};
   }
 `
 export default Section

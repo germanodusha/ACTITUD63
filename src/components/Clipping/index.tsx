@@ -86,8 +86,12 @@ const Description = styled.p`
     text-transform: uppercase;
   }
   @media (max-width: 768px) {
-    font-size: 1rem;
     text-transform: uppercase;
+    max-width: 95%;
+    font-size: 1.25rem;
+    span {
+      font-size: 1rem;
+    }
   }
 `
 const Media = styled.div`

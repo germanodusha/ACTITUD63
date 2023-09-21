@@ -18,7 +18,8 @@ const Team: FC = () => {
         className="mobile-title"
         style={{
           paddingTop: '1rem',
-          lineHeight: '2rem'
+          lineHeight: '2rem',
+          marginBottom: '0'
         }}
       >{`<TEAM>`}</span>
       <TeamContainer>

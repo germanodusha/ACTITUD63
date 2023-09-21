@@ -14,15 +14,19 @@ const VisionSectionContainer: FC<{
 }
 const VisionSectionContainerStyle = styled.div`
   padding-left: 2rem;
-  padding-right: 1rem;
+  padding-right: 2rem;
   span {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+  }
+  b {
+    font-size: 3.5rem !important;
   }
   @media (max-width: 768px) {
     padding-left: 0;
     padding-right: 0;
     b {
-      font-size: 1.5rem;
+      font-size: 1.75rem !important;
+      font-weight: 600;
     }
   }
 `

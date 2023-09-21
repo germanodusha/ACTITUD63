@@ -41,10 +41,12 @@ span {
     font-size: 1.25rem;
   }
   b {
+    font-weight: 600;
     font-size: 1rem;
   }
   .mobile-title {
     display: block;
     font-size: 1rem;
+    margin-bottom: 1rem;
   }
 }

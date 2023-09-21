@@ -47,13 +47,7 @@ const ServicesList: FC = () => {
                 textTransform: 'uppercase'
               }}
             >{`<${service.title}> `}</span>
-            <b
-              style={{
-                fontWeight: 400
-              }}
-            >
-              {service.description}
-            </b>
+            <b>{service.description}</b>
           </Description>
         </div>
       ))}
