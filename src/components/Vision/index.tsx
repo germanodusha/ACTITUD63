@@ -1,5 +1,4 @@
 import { type FC } from 'react'
-import Text from '../UI/Text'
 import VisionSectionContainer from './VisionSectionContainer'
 
 const Vision: FC = () => {
