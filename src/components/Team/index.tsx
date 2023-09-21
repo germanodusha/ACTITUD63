@@ -30,7 +30,6 @@ const Team: FC = () => {
               style={{
                 borderLeft: index !== 0 ? '1px solid #a1a1a1' : 'none',
                 paddingLeft: index !== 0 ? '1rem' : 'none',
-                paddingTop: '1rem'
               }}
             >
               {column.map((member, index) => {
@@ -74,6 +73,7 @@ const TeamContainer = styled.div`
   }
 `
 const MemberContainer = styled.div`
+  padding-top: 3rem;
   @media (max-width: 768px) {
     border-left: none !important;
     padding-left: 0 !important;

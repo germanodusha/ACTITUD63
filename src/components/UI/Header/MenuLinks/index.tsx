@@ -7,7 +7,7 @@ const MenuLinks: FC = () => {
   const [showMenu, setShowMenu] = useState(false)
   const [sound, setSound] = useState<HTMLAudioElement | null>(null)
   useEffect(() => {
-    const hoverSound = new Audio('/sounds/hover.wav')
+    const hoverSound = new Audio('/hover.mp3')
     setSound(hoverSound)
   }, [])
   return (
