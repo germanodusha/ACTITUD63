@@ -43,7 +43,7 @@ const Clipping: FC = () => {
             >
               <Description>
                 {`<`}
-                {clip.description}
+                <span>{clip.description}</span>
                 {`>`} <Link href={clip.href} />
               </Description>
             </div>
@@ -79,6 +79,12 @@ const Description = styled.p`
   font-size: 2rem;
   text-align: center;
   margin-bottom: 2rem;
+  max-width: 70%;
+  margin: auto;
+  span {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
   @media (max-width: 768px) {
     font-size: 1rem;
     text-transform: uppercase;

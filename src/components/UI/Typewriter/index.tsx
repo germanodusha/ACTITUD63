@@ -76,8 +76,27 @@ const Typewriter: FC<{
         dangerouslySetInnerHTML={{
           __html: `${renderedText}`
         }}
+        style={{
+          position: 'absolute'
+        }}
         {...{ after: suffix, before: prefix }}
       />
+      <span>
+        {texts.map((text, index) => {
+          return (
+            <span
+              key={index}
+              style={{
+                fontWeight: text.isBold !== null ? 400 : 300,
+                color: 'transparent',
+                visibility: 'hidden'
+              }}
+            >
+              {text.text}
+            </span>
+          )
+        })}
+      </span>
     </div>
   )
 }

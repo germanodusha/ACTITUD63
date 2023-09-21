@@ -28,7 +28,8 @@ const Team: FC = () => {
               key={index}
               style={{
                 borderLeft: index !== 0 ? '1px solid #a1a1a1' : 'none',
-                paddingLeft: index !== 0 ? '1rem' : 'none'
+                paddingLeft: index !== 0 ? '1rem' : 'none',
+                paddingTop: '1rem'
               }}
             >
               {column.map((member, index) => {

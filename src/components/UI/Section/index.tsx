@@ -33,7 +33,7 @@ const StyledSection = styled.section<{
 }>`
   padding-left: ${({ $noxpadding }) => ($noxpadding ? 0 : '2rem')};
   padding-right: ${({ $noxpadding }) => ($noxpadding ? 0 : '2rem')};
-  padding-top: ${({ $noypadding }) => ($noypadding === 'true' ? 0 : '1rem')};
+  padding-top: ${({ $noypadding }) => ($noypadding === 'true' ? 0 : '2rem')};
   padding-bottom: ${({ $noypadding }) => ($noypadding === 'true' ? 0 : '7rem')};
   @media (max-width: 768px) {
     padding-left: ${({ $noxpadding }) => ($noxpadding ? 0 : '1rem')};

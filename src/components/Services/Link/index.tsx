@@ -9,7 +9,7 @@ type Props = {
 } & HTMLAttributes<HTMLDivElement>
 const Link: FC<Props> = ({ href, label = 'Link', style }) => {
   return (
-    <StyledNextLink style={style} href={href}>
+    <StyledNextLink target="_blank" style={style} href={href}>
       {'<'}
       <b>{label}</b>
       {'>'}

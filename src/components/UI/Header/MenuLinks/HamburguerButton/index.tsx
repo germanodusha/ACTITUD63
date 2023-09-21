@@ -20,7 +20,7 @@ const HamburguerButton: FC = () => {
 const MenuButtonContainer = styled.div`
   background: rgba(0, 0, 0, 0.3);
   box-shadow: var(--menu-links-shadow);
-  height: 50px;
+  height: 47px;
   width: 64px;
   display: flex;
   justify-content: center;
