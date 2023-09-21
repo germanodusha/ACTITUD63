@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <link rel="mask-icon" href="/icon.svg" color="grey" />
+        <link rel="mask-icon" href="/icon.svg" color="#ececec" />
       </Head>
       <body>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
