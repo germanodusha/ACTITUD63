@@ -6,10 +6,7 @@ import StyledComponentsRegistry from '@/lib/registry'
 
 export const metadata = {
   title: 'Actitud1963',
-  description: 'ACTITUD-63',
-  icons: [
-    
-  ]
+  description: 'ACTITUD-63'
 }
 
 export default function RootLayout({
