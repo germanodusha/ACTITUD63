@@ -25,7 +25,7 @@ const VisionSectionContainerStyle = styled.div`
     padding-left: 0;
     padding-right: 0;
     b {
-      font-size: 1.75rem !important;
+      font-size: 1.5rem !important;
       font-weight: 600;
     }
   }

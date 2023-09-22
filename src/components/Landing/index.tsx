@@ -41,10 +41,10 @@ const LandingContainer = styled.article`
     padding-left: 1rem;
     padding-right: 1rem;
     span {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
     }
     b {
-      font-size: 1rem;
+      font-size: 1.25rem;
     }
   }
 `

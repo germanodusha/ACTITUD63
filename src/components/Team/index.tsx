@@ -77,15 +77,13 @@ const MemberContainer = styled.div`
   @media (max-width: 768px) {
     border-left: none !important;
     padding-left: 0 !important;
+    padding-top: 1rem !important;
   }
 `
 const Member = styled.div`
   @media (max-width: 768px) {
     span {
       line-height: 1.25rem;
-    }
-    span:first-child {
-      width: 70%;
     }
   }
 `
