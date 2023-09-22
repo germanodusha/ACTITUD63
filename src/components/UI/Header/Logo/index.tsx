@@ -43,7 +43,7 @@ const HeaderLogoContainer = styled.div<{
     margin: auto;
     div {
       height: 10vh;
-      max-height: 23vh;
+      max-height: 10vh;
     }
   }
 `
