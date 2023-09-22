@@ -8,7 +8,7 @@ const VisionListItemStyle = styled.li`
   display: grid;
   grid-template-columns: 5rem auto;
   @media (max-width: 768px) {
-    grid-template-columns: auto auto;
+    grid-template-columns: 2rem auto;
     gap: 1rem;
   }
 `
