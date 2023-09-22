@@ -80,10 +80,10 @@ const LinkContainer = styled.div`
   }
 `
 const Stamp = styled.span`
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   @media (max-width: 768px) {
-    font-size: 0.6rem;
+    font-size: 1.25rem;
   }
 `
 const ProjectContainer = styled.div`

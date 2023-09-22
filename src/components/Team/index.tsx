@@ -44,9 +44,7 @@ const Team: FC = () => {
                   >
                     <span>
                       <b
-                        style={{
-                          fontWeight: 500
-                        }}
+
                       >
                         {member.name}
                       </b>
@@ -74,6 +72,7 @@ const TeamContainer = styled.div`
 `
 const MemberContainer = styled.div`
   padding-top: 3rem;
+  padding-right: 0.5rem;
   @media (max-width: 768px) {
     border-left: none !important;
     padding-left: 0 !important;
@@ -81,6 +80,7 @@ const MemberContainer = styled.div`
   }
 `
 const Member = styled.div`
+
   @media (max-width: 768px) {
     span {
       line-height: 1.25rem;

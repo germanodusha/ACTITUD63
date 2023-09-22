@@ -1,13 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState, type FC } from 'react'
+import { useScroll } from '@/hooks/useScroll'
+import { useState, useRef, type FC, useEffect } from 'react'
 import styled from 'styled-components'
 
 const SlideShow: FC<{ images: string[] }> = ({ images }) => {
+  const { scroll } = useScroll()
   const [index, setIndex] = useState(0)
   const [x, setX] = useState(0)
   const [y, setY] = useState(0)
+  const [cursor, setCursor] = useState('none')
   const [imageSrc, setImageSrc] = useState('/cursor-left.svg')
   const [display, setDisplay] = useState('none' as 'none' | 'block' | 'flex')
+  const cursorTimer = useRef(setTimeout(() => {}, 0))
   const addImageOnCursor = (src: string): void => {
     setImageSrc(src)
     setDisplay('block')
@@ -16,12 +20,29 @@ const SlideShow: FC<{ images: string[] }> = ({ images }) => {
     const { clientX, clientY } = event
     const x = clientX - 64 / 2
     const y = clientY - 64 / 2
+    setCursor('none')
+    if (cursorTimer.current !== null) {
+      clearTimeout(cursorTimer.current)
+    }
     setX(x)
     setY(y)
   }
+  useEffect(() => {
+    if (cursorTimer.current !== null) {
+      clearTimeout(cursorTimer.current)
+    }
+    cursorTimer.current = setTimeout(() => {
+      setCursor('auto')
+      setDisplay('none')
+    }, 500)
+  }, [scroll])
   return (
     <Container
+      style={{
+        cursor
+      }}
       onMouseLeave={() => {
+        setCursor('auto')
         setDisplay('none')
       }}
     >
@@ -70,13 +91,6 @@ const SlideShow: FC<{ images: string[] }> = ({ images }) => {
           ))}
         </ImageGrid>
       </Wrapper>
-      <LeftSection
-        onClick={() => {
-          if (index > 0) {
-            setIndex(index - 1)
-          }
-        }}
-      />
       <RightSection
         onClick={() => {
           if (index < images.length - 1) {
@@ -128,7 +142,6 @@ const LeftSection = styled.div`
   position: absolute;
   left: 0;
   z-index: 1;
-  cursor: none;
 `
 const RightSection = styled.div`
   width: 50%;
@@ -136,7 +149,6 @@ const RightSection = styled.div`
   position: absolute;
   right: 0;
   bottom: 0;
-  cursor: none;
 `
 const Container = styled.div`
   width: 100%;
