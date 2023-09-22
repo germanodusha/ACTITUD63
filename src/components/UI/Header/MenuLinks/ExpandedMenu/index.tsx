@@ -5,15 +5,15 @@ import styled from 'styled-components'
 
 const links = [
   {
-    id: '#about',
+    id: '#about-anchor',
     label: 'About'
   },
   {
-    id: '#projects',
+    id: '#projects-anchor',
     label: 'Projects'
   },
   {
-    id: '#clipping',
+    id: '#clipping-anchor',
     label: 'Clipping'
   }
 ]

@@ -18,11 +18,18 @@ const Section: FC<SectionProps> = ({
 }) => {
   useRegisterSection({ id, label })
   return (
-    <StyledSection
-      $noypadding={`${noypadding}`}
-      $noxpadding={noxpadding}
-      id={id}
-    >
+    <StyledSection $noypadding={`${noypadding}`} $noxpadding={noxpadding} id={id}>
+      <div
+        style={{
+          height: '12vh',
+          position: 'absolute',
+          top: '-14vh',
+          visibility: 'hidden',
+          pointerEvents: 'none',
+          zIndex: -1
+        }}
+        id={`${id}-anchor`}
+      ></div>
       {children}
     </StyledSection>
   )
@@ -31,6 +38,7 @@ const StyledSection = styled.section<{
   $noypadding: string
   $noxpadding: boolean
 }>`
+  position: relative;
   padding-left: ${({ $noxpadding }) => ($noxpadding ? 0 : '2rem')};
   padding-right: ${({ $noxpadding }) => ($noxpadding ? 0 : '2rem')};
   padding-top: ${({ $noypadding }) => ($noypadding === 'true' ? 0 : '3rem')};
