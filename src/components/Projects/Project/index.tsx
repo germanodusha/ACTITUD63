@@ -83,7 +83,7 @@ const Stamp = styled.span`
   font-size: 1.25rem;
   text-transform: uppercase;
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 `
 const ProjectContainer = styled.div`

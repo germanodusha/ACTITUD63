@@ -47,6 +47,9 @@ const StyledNextLink = styled(NextLink)`
   }
   @media (max-width: 768px) {
     font-size: 1.5rem;
+    b {
+      font-size: 1.25rem;
+    }
   }
 `
 export default Link
