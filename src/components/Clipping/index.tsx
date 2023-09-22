@@ -54,7 +54,7 @@ const Clipping: FC = () => {
                   alt={clip.description}
                   fill
                   style={{
-                    objectFit: 'contain'
+                    objectFit: 'cover'
                   }}
                 />
               ) : (
@@ -102,20 +102,14 @@ const Media = styled.div`
   overflow: hidden;
   max-width: 100%;
   margin-bottom: 3rem;
-  img {
-    border-radius: 2rem;
-  }
-  video {
-    border-radius: 2rem;
-  }
+  border-radius: 2rem;
+  margin-top: 1.5rem;
   @media (max-width: 768px) {
     margin: 1.5rem auto;
     margin-bottom: 3rem;
     width: 50%;
     height: 100px;
-    img {
-      border-radius: 1rem;
-    }
+    border-radius: 1.25rem;
   }
 `
 export default Clipping
