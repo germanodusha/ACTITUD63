@@ -45,5 +45,8 @@ const StyledNextLink = styled(NextLink)`
   &:hover {
     color: white;
   }
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `
 export default Link

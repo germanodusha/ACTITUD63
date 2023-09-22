@@ -38,11 +38,11 @@ span {
 }
 @media (max-width: 768px) {
   span {
-    font-size: 1.75rem;
+    font-size: 1.25rem !important;
   }
   b {
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
   .mobile-title {
     display: block;
