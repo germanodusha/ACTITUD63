@@ -43,11 +43,7 @@ const Team: FC = () => {
                     }}
                   >
                     <span>
-                      <b
-
-                      >
-                        {member.name}
-                      </b>
+                      <b>{member.name}</b>
                     </span>
                     <Title $hideOnMobile={false}>{`${member.role}`}</Title>
                   </Member>
@@ -80,10 +76,8 @@ const MemberContainer = styled.div`
   }
 `
 const Member = styled.div`
-
   @media (max-width: 768px) {
     span {
-      line-height: 1.25rem;
     }
   }
 `
