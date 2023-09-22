@@ -18,7 +18,11 @@ const Section: FC<SectionProps> = ({
 }) => {
   useRegisterSection({ id, label })
   return (
-    <StyledSection $noypadding={`${noypadding}`} $noxpadding={noxpadding} id={id}>
+    <StyledSection
+      $noypadding={`${noypadding}`}
+      $noxpadding={noxpadding}
+      id={id}
+    >
       <div
         style={{
           height: '12vh',

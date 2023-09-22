@@ -49,10 +49,12 @@ const useTitle = (): string => {
         return undefined
       })
       .filter((section) => section !== undefined)
-    const headerHeight = window.innerHeight * 0.12 
+    const headerHeight = window.innerHeight * 0.12
     console.log(headerHeight)
     const section = sectionsPositions
-      .filter((section) => (section?.position ?? 0) <= scroll + headerHeight + 64)
+      .filter(
+        (section) => (section?.position ?? 0) <= scroll + headerHeight + 64
+      )
       .pop()
 
     setTitle('')
