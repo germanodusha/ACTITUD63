@@ -12,9 +12,9 @@ const TitleStyled = styled.h1<{
   }
   @media (max-width: 768px) {
     display: ${({ $hideOnMobile }) => ($hideOnMobile ? 'none' : 'block')};
-    font-size: 1rem;
+    font-size: 1.25rem !important;
     span {
-      font-size: 0.75rem;
+      font-size: 0.75rem !important;
     }
   }
 `
